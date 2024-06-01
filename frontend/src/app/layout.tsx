@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Fragment } from 'react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,10 +16,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <h1>HIIIIIIIII อันนี้เอาไว้ใส่ NAVBARKub มันคือLayout</h1>
-        {children}</body>
-    </html>
+    <Fragment>
+      <html lang="en">
+        <body className={inter.className}>
+          <h1>HIIIIIIIII อันนี้เอาไว้ใส่ NAVBARKub มันคือLayout</h1>
+          {children}
+        </body>
+      </html>
+    </Fragment>
   );
 }
